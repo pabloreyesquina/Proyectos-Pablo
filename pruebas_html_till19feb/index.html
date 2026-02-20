@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8"> <!-- -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <meta name="description" content="Página de prueba de Pablo para hacer tests de html">
+    <title>Portfolio de Pablo</title>
+
+    <link rel="icon" type="image/jpg" href="images/tomato.jpg">
+
+    <meta property="og:title" content="Portfolio de Pablo" />
+    <meta property="og:description"
+        content="Sitio de prueba sobre habilidades de desarrollo frontend y tests de HTML." />
+    <meta property="og:image" content="images/monkey.jpg" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Tests de Pablo" />
+    <link rel="alternate" href="">
+    <link rel="canonical" href="">
+
+    <style>
+        body {
+            background: #1ac8d184;
+
+        }
+
+        aside {
+            width: 30%;
+            padding-left: 15px;
+            margin-left: 15px;
+            float: right;
+            background-color: #4629c5;
+        }
+
+        h1 {
+            font-size: 24px;
+            color: red;
+
+        }
+
+        /* img {
+            border: 2px solid black;
+            border-radius: 15px;
+            display: inline-block;
+            padding: 5 px;
+
+        } */
+
+        p {
+            background-color: red;
+        }
+
+        .especial {
+            background-color: yellow;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        #principal {
+
+            color: rgb(171, 215, 11);
+        }
+    </style>
+
+</head>
+
+<body>
+    <header>
+        <h1>Bienvenido a mi Portfolio</h1>
+        <nav>
+            <!--A continuación los elementos de ancla o hipervinculos al interior del documento o a otros docuementos exteriores-->
+            <a href="#Html">HTML</a>
+            <a href="#CSS">CSS</a>
+            <a href="#Usabilidad">Usabilidad</a>
+            <a href="https://www.w3schools.com/html/default.asp" target="_blank" rel="noreferrer">
+                W3School</a>
+        </nav>
+        <p>Este es un sitio de prueba para practicar <strong>desarrollo web</strong>.</p>
+
+
+    </header>
+
+    <main>
+        <section>
+            <h2 id="principal">Mis Habilidades</h2>
+            <ul>
+                <li class="items-de-habilidades">Desarrollo Frontend (HTML, CSS)</li>
+                <li class="items-de-habilidades">Diseño de interfaces</li>
+                <li class="items-de-habilidades">Gestión de proyectos</li>
+
+            </ul>
+        </section>
+
+        <section>
+            <p>Enlace a la receta de patata</p>
+            <a href="receta_tortilla_ia.html">Receta de tortilla de patatas</a>
+
+
+
+        </section>
+        <section>
+
+            <dialog id="miventana">
+                <p style="color: blue; background-color: transparent;">¡Hola! Soy un cuadro de diálogo nativo.</p>
+                <button id="cerrar">Cerrar</button>
+            </dialog>
+
+            <button id="abrir">Abrir Ventana</button>
+            <script>
+                window.abrir.addEventListener('click', () => {
+                    window.miventana.showModal();   
+                });
+                window.cerrar.addEventListener('click', () => {
+                    window.miventana.close();
+                });
+            </script>
+
+        </section>
+
+
+        <section>
+            <h2>Imagen de Prueba</h2>
+            <a href="https://www.gettyimages.es/fotos/monos"><img src="images/monkey.jpg" alt="Un mono simpático"
+                    width="500"></a>
+            <a download href="images/monkey.jpg"><img src="images/monkey.jpg" alt="Un mono simpático" width="500"></a>
+
+            <aside>
+
+                <strong> Lista desordenada de prueba: </strong>
+                <ul>
+                    <li>Elemento 1</li>
+                    <li>Elemento 2</li>
+                    <li>Elemento 3</li>
+                    <li>Elemento 4</li>
+                </ul>
+
+                <strong>Lista ordenada de prueba</strong>
+                <ol>
+                    <li>Elemento 1</li>
+                    <li>Elemento 2</li>
+                    <li>Elemento 3</li>
+                    <li>Elemento 4</li>
+                </ol>
+
+
+            </aside>
+        </section>
+
+        <section>
+            <article id="Html">
+                <h3> HTML de prueba</h3>
+                <p class="especial">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Harum, enim perspiciatis.
+                    Cum sunt rem,
+                    minima similique vel sapiente? Tempora voluptatem numquam ducimus amet quos quo omnis hic voluptate
+                    ullam minus.
+                </p>
+            </article>
+            <article id="CSS">
+                <h4> CSS de prueba</h4>
+                <p class="especial">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga eligendi, atque id sed
+                    quibusdam sequi
+                    fugit praesentium nemo dolorem, quae aspernatur earum incidunt quos nam numquam ratione tempore
+                    quasi porro.
+                </p>
+            </article>
+            <article id="Usabilidad">
+                <h4> Usabilidad de prueba </h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae enim magnam perspiciatis sequi minus
+                    non ullam quo deleniti quaerat totam similique, consequatur eos repudiandae molestias animi quisquam
+                    architecto illum ut?
+                    Ea ducimus ex modi aliquam vero! Dignissimos id ut a architecto ipsam quaerat incidunt repellendus
+                    vitae ea voluptatum. Corporis nostrum culpa molestias laborum ducimus qui esse quas ea delectus
+                    nihil?
+                    Eveniet enim praesentium totam non odit ipsam doloremque, perferendis voluptas omnis pariatur
+                    aspernatur ex, aliquam ipsa repellendus. Tempore voluptate accusamus, praesentium vitae fugiat ullam
+                    sed. Odio neque inventore eligendi accusamus?
+                </p>
+            </article>
+
+            <p>H<sub>2</sub>0</p>
+
+        </section>
+        <img src="images/Tesla.avif" alt="Tesla" style="width: 100%; aspect-ratio: 256/145;" loading="lazy">
+
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/3nYLTiY5skU?si=-3LANxaZPLxgEXW0"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+        <iframe width="600" height="600" src="https://kingscorner.es/"></iframe>
+
+        <dialog>
+
+
+
+        </dialog>
+
+    </main>
+
+    <footer>
+        <p><a href="mailto:pablo@mail.com">Enviame un correo</a></p>
+        <p><a href="tel:+235235235325">Llamame por teléfono</a></p>
+        <p><a href="https://wa.me/123456789?text=Hola%20Pablo" target="_blank">WhatsApp</a></p>
+
+        <p><small>&copy 2026 Pablo - Todos los derechos reservados.</small> </p>
+    </footer>
+
+</body>
+
+
+</html>

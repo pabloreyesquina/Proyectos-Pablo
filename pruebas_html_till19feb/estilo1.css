@@ -1,0 +1,45 @@
+p {
+    color: blue;
+    font-size: 16px;
+}
+
+    /* Estilo para el contenedor principal */
+.tarjeta {
+    width: 300px;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Sombra suave */
+    padding: 20px;
+    margin: 50px auto; /* Centra la tarjeta en la pantalla */
+    text-align: center;
+    border: 1px solid #eee;
+}
+
+/* Estilo para la imagen (hacerla redonda) */
+.tarjeta img {
+    border-radius: 50%;
+    border: 3px solid #3498db;
+    width: 150px;
+    height: 150px;
+}
+
+/* Estilo para el nombre */
+.tarjeta h2 {
+    color: #333;
+    margin: 15px 0 5px 0;
+}
+
+/* Estilo para el enlace convertido en botón */
+.boton {
+    display: inline-block;
+    text-decoration: none;
+    background-color: #3498db;
+    color: white;
+    padding: 8px 20px;
+    border-radius: 20px;
+    transition: 0.3s; /* Hace que el cambio de color sea suave */
+}
+
+.boton:hover {
+    background-color: #2ecc71; /* Cambia a verde al pasar el mouse */
+}

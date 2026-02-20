@@ -1,0 +1,59 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+div {
+   
+    background-color: aquamarine;    
+    border-radius: 1rem;
+    text-align: center;
+    padding: 20px;
+    box-shadow: 0 0 15px black;
+
+}
+
+table {
+
+    border-collapse: separate;
+    border-spacing: 10px;
+    width: 100%;
+    padding: 0.2rem;
+}
+
+td {    
+    border-radius: 5rem;
+    background-color: white;
+    padding: 0.2rem;
+    height: 5rem;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 1.5rem;
+    font-weight: 600;
+    
+}
+
+td:hover {
+    box-shadow: 0 0 15px var(--color-celda);
+}    
+
+td:active {
+    background-color: var(--color-celda);
+    color: white;    
+}
+
+
+
+.celda1 { --color-celda: red; }
+.celda2 { --color-celda: blue; }
+.celda3 { --color-celda: green; }
+.celda4 { --color-celda: orange; }
+.celda5 { --color-celda: brown; }
+.celda6 { --color-celda: purple; }
+
+

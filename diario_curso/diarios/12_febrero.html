@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diario de Clase - 12 de Febrero</title>
+    <style>
+        :root {
+            --primary: #2563eb;
+            --accent: #f59e0b;
+            --danger: #ef4444;
+            --success: #10b981;
+            --info: #06b6d4;
+            --dark: #1e293b;
+            --code-bg: #1e1e1e;
+        }
+        body { font-family: 'Segoe UI', sans-serif; line-height: 1.6; max-width: 950px; margin: 0 auto; padding: 30px; color: var(--dark); background-color: #f8fafc; }
+        header { background: var(--primary); color: white; padding: 2rem; border-radius: 12px; margin-bottom: 2rem; text-align: center; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); }
+        .nav-link { color: var(--primary); text-decoration: none; font-weight: bold; display: inline-block; margin-bottom: 1rem; }
+        
+        h2 { border-bottom: 2px solid #e2e8f0; padding-bottom: 0.5rem; margin-top: 2rem; color: var(--primary); display: flex; align-items: center; gap: 10px; }
+        h3 { color: #334155; margin-top: 1.5rem; }
+
+        /* Caja de trucos */
+        .shortcuts-box { background: #334155; color: white; padding: 1.5rem; border-radius: 10px; margin-bottom: 2rem; border-left: 6px solid var(--accent); }
+        .shortcuts-box h2 { color: #f1f5f9; border: none; margin-top: 0; }
+        .shortcuts-box ul { list-style: none; padding: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+        .shortcuts-box li { font-family: 'Consolas', monospace; font-size: 0.9rem; }
+        .shortcuts-box code { background: #475569; color: #f1f5f9; padding: 2px 5px; border-radius: 4px; }
+
+        /* Bloques de contenido */
+        .block { background: white; padding: 1.5rem; border-radius: 10px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); margin-bottom: 1.5rem; border-left: 6px solid; }
+        .topic { border-left-color: var(--primary); }
+        .detail { border-left-color: var(--accent); background-color: #fffcf5; }
+        .media { border-left-color: var(--info); }
+        .exam-alert { border-left-color: var(--danger); background-color: #fef2f2; }
+        
+        code { background: #f1f5f9; padding: 0.2rem 0.4rem; border-radius: 4px; color: #e11d48; font-family: 'Consolas', monospace; font-size: 0.9rem; }
+        pre { background: var(--code-bg); color: #d4d4d4; padding: 1rem; border-radius: 8px; overflow-x: auto; font-size: 0.85rem; margin: 10px 0; border: 1px solid #333; }
+        
+        table { width: 100%; border-collapse: collapse; margin: 15px 0; background: white; }
+        th, td { padding: 12px; border: 1px solid #cbd5e1; text-align: left; }
+        th { background: #f1f5f9; color: var(--primary); }
+
+        .comparison { display: flex; gap: 20px; margin-top: 10px; }
+        .comparison-card { flex: 1; padding: 15px; border-radius: 8px; border: 1px solid #e2e8f0; }
+
+        footer { text-align: center; color: #94a3b8; font-size: 0.8rem; margin-top: 3rem; padding: 20px; border-top: 1px solid #e2e8f0; }
+    </style>
+</head>
+<body>
+
+    <a href="/Pruebas html/Diario curso/diaro_curso.html" class="nav-link">← Volver al Índice Principal</a>
+
+    <header>
+        <h1>Sesión 12 de Febrero</h1>
+        <p>Listas, Hipervínculos, Multimedia y Estructura de Bloques</p>
+    </header>
+
+    <section class="shortcuts-box">
+        <h2>⌨️ Atajos de VS Code usados hoy</h2>
+        <ul>
+            <li><code>Ctrl + K, C</code>: Comentar rápidamente.</li>
+            <li><code>Alt + Shift + A</code>: Comentario de bloque.</li>
+            <li><code>a + Tab</code> / <code>img + Tab</code>: Emmet rápido.</li>
+            <li><code>ul>li*5</code>: Generar lista de 5 elementos.</li>
+        </ul>
+    </section>
+
+    <div class="block topic">
+        <h2>1. Navegación y Rutas</h2>
+        <p>Aprendimos a movernos entre archivos y dentro del mismo documento.</p>
+        <table>
+            <tr><th>Concepto</th><th>Descripción / Ejemplo</th></tr>
+            <tr><td><strong>Ruta Relativa</strong></td><td><code>../archivo.html</code> (Sube un nivel). Clave para portabilidad.</td></tr>
+            <tr><td><strong>Anclas</strong></td><td><code>href="#id-destino"</code> Navega dentro de la misma página.</td></tr>
+            <tr><td><strong>Atributos</strong></td><td><code>target="_blank"</code> (Nueva pestaña), <code>title</code> (Tooltip), <code>download</code>.</td></tr>
+        </table>
+    </div>
+
+    <div class="block exam-alert">
+        <h2>🚨 Nota sobre Rutas y Live Preview</h2>
+        <p>Si el enlace <code>../</code> falla en VS Code, asegúrate de haber abierto la <strong>carpeta raíz</strong> del proyecto. Si solo abres la subcarpeta "diarios", el servidor no podrá acceder a los archivos de arriba.</p>
+    </div>
+
+    <div class="block media">
+        <h2>2. Elementos Multimedia: &lt;img&gt;</h2>
+        <p>Etiqueta de autocierre para insertar contenido visual.</p>
+        <ul>
+            <li><strong>src:</strong> Origen de la imagen (Ruta local o URL).</li>
+            <li><strong>alt:</strong> Texto alternativo (Obligatorio por accesibilidad y SEO).</li>
+            <li><strong>loading="lazy":</strong> Carga diferida para mejorar el rendimiento.</li>
+        </ul>
+        <h3>Formatos recomendados:</h3>
+        <p><code>WebP</code> (Moderno/Eficiente), <code>SVG</code> (Vectorial/Escalable), <code>PNG</code> (Transparencias) y <code>JPG</code> (Fotos).</p>
+    </div>
+
+    <div class="block detail">
+        <h2>Ejercicio Práctico: Imágenes clicables</h2>
+        <p>Combinamos <code>&lt;a&gt;</code> e <code>&lt;img&gt;</code> para que una imagen actúe como botón:</p>
+        <pre><code>&lt;a href="grande.jpg" download="mi-foto"&gt;
+    &lt;img src="peque.jpg" alt="Descripción de la imagen"&gt;
+&lt;/a&gt;</code></pre>
+    </div>
+
+    <div class="block topic">
+        <h2>3. Contenedores Genéricos</h2>
+        <p>Elementos sin significado semántico pero vitales para el diseño (CSS).</p>
+        <div class="comparison">
+            <div class="comparison-card" style="border-top: 4px solid var(--primary);">
+                <strong>&lt;div&gt; (Block)</strong>
+                <p>Ocupa todo el ancho. Salto de línea automático. Ideal para secciones y estructuras.</p>
+            </div>
+            <div class="comparison-card" style="border-top: 4px solid var(--info);">
+                <strong>&lt;span&gt; (Inline)</strong>
+                <p>Ocupa solo su contenido. No hay salto de línea. Ideal para estilos dentro de párrafos.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="block exam-alert">
+        <h2>🚨 Alerta de Examen: Semántica vs Genéricos</h2>
+        <p><strong>REGLA DE ORO:</strong> Si existe una etiqueta semántica (<code>&lt;header&gt;, &lt;nav&gt;, &lt;article&gt;</code>), úsala. Evita la "div-itis" (uso excesivo de divs). Los roles ARIA solo se usan si no hay etiqueta semántica disponible.</p>
+    </div>
+
+    <div class="block detail">
+        <h2>Cierre del día: Tips de Midudev</h2>
+        <p>Vimos cómo potenciar nuestras páginas de prueba con atributos como <code>download</code> para ofrecer archivos descargables directamente desde el navegador, mejorando la interacción del usuario.</p>
+    </div>
+
+    <footer>
+        <p>Diario de Aprendizaje - Desarrollo de Aplicaciones Web 2026</p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="estilo_formularios.css">
+
+</head>
+
+<body>
+
+    <form action="action_page.php">
+        <label for="fname">First name: </label><br>
+        <input type="text" id="fname" name="fname" placeholder="Your name here"><br>
+        <label for="lname">Last name: </label><br>
+        <input type="text" id="lname" name="lname" placeholder="Your last name here"><br><br>
+
+        <!-- añadimos elementos: el usuario deb elegir método preferido de contacto (y sólo uno) entre correo postal, emmail, telefono, o whatsapp-->
+        <label for="contacto">Método de contacto preferido:</label><br>
+        <input type="radio" id="postal" name="contacto" value="postal">
+        <label for="postal">Correo postal</label><br>
+        <input type="radio" id="email" name="contacto" value="email">
+        <label for="email">Email</label><br>
+        <input type="radio" id="telefono" name="contacto" value="telefono">
+        <label for="telefono">Teléfono</label><br>
+        <input type="radio" id="whatsapp" name="contacto" value="whatsapp">
+        <label for="whatsapp">WhatsApp</label><br><br>
+
+
+        <!-- añadimos elemento: el usuario debe explicar las razones para anular la suscripcioón al servicio-->
+        <label for="razones">Razones para anular la suscripción:</label><br>
+        <textarea id="razones" name="razones" rows="4" cols="50"></textarea><br><br>
+
+        <!-- añadimos elemento: el usuario debe acceder al servidor previamente autenticado, usuario y contraseña-->
+        <label for="usuario">Usuario:</label>
+        <input type="text" id="usuario" name="usuario"><br><br>
+        <label for="contraseña">Contraseña:</label>
+        <input type="password" id="contraseña" name="contraseña"><br><br>
+
+        <!-- añadimos elemento: el usuario debe enviar un archivo para acreditar sus motivaciones-->
+
+        <label for="archivo">Archivo de acreditación:</label><br>
+        <input type="file" id="archivo" name="archivo"><br><br>
+
+        <!-- añadimos elemento: el usuario debe elegir la fecha ...-->
+
+
+        
+        <input type="submit" value="Enviar"><br><br>
+
+    </form>
+
+
+    <form method="post" action="/">
+    
+        <fieldset>
+
+            <label>Nombre:</label>
+            <input 
+            type="text" 
+            name="name1"
+            placeholder="Pablo A Llamas"
+            >  
+
+            <label>Email:</label>
+            <input 
+            type="email" 
+            name="email"
+            placeholder="pablo@gmail.com"
+            >  
+
+
+
+
+
+    </form>
+
+
+
+
+
+</body>
+
+</html>

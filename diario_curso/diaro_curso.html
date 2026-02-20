@@ -1,0 +1,134 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Diario de Progreso - DAW</title>
+    <style>
+        :root {
+            --primary: #2563eb;
+            --secondary: #64748b;
+            --bg: #f8fafc;
+            --card-bg: #ffffff;
+        }
+
+        body {
+            font-family: 'Segoe UI', system-ui, sans-serif;
+            background-color: var(--bg);
+            color: #1e293b;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            padding: 40px 0;
+            background: linear-gradient(135deg, #1e3a8a, #2563eb);
+            color: white;
+            border-radius: 15px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 { margin: 0; font-size: 2.5rem; }
+        p.subtitle { opacity: 0.9; font-size: 1.1rem; }
+
+        .timeline {
+            display: grid;
+            gap: 20px;
+        }
+
+        .day-card {
+            background: var(--card-bg);
+            padding: 20px;
+            border-radius: 12px;
+            border-left: 5px solid var(--primary);
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            transition: transform 0.2s, box-shadow 0.2s;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .day-card:hover {
+            transform: translateX(5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+
+        .day-info h2 {
+            margin: 0 0 5px 0;
+            font-size: 1.25rem;
+            color: #1e3a8a;
+        }
+
+        .day-info span {
+            font-size: 0.9rem;
+            color: var(--secondary);
+            font-weight: bold;
+        }
+
+        .btn-link {
+            text-decoration: none;
+            background-color: var(--primary);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: background 0.2s;
+        }
+
+        .btn-link:hover {
+            background-color: #1d4ed8;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            color: var(--secondary);
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>📓 Diario Curso Desarrolo Aplicaciones Web</h1>
+            <p class="subtitle">Desarrollo de Aplicaciones Web - Curso 2026</p>
+        </header>
+
+        <main class="timeline">
+            <article class="day-card">
+                <div class="day-info">
+                    <span>SEMANA 1</span>
+                    <h2>Días 1 y 2: Introducción a HTML</h2>
+                    <p>Estructura básica, etiquetas de texto y configuración de VS Code.</p>
+                </div>
+                <a href="diarios/dia1_diario.html" class="btn-link">Ver apuntes</a>
+            </article>
+
+            <article class="day-card">
+                <div class="day-info">
+                    <span>SEMANA 1</span>
+                    <h2>Día 3: Listas y Enlaces</h2>
+                    <p>Listas anidadas, de descripción y navegación mediante enlaces internos y externos.</p>
+                </div>
+                <a href="diarios/12_febrero.html" class="btn-link">Ver apuntes</a>
+            </article>
+
+            </main>
+
+        <footer>
+            <p>&copy; 2026 Pablo - Todos los derechos reservados.</p>
+        </footer>
+    </div>
+
+</body>
+</html>

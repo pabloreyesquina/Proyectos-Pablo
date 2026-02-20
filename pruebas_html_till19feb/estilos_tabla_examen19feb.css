@@ -1,0 +1,27 @@
+/* Configuración de la tabla */
+table {
+    border-collapse: collapse;
+}
+
+/* Centrar la tabla en el navegador */
+.contenedor-tabla {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Colores de fondo */
+#cabecera-pais {
+    background-color: #D3D3D3;
+}
+
+#fila-esp {
+    background-color: #808080;
+}
+
+/* Estilo columna País */
+.nombre-pais {
+    text-align: center;
+    font-family: 'Roboto Mono', monospace;
+}

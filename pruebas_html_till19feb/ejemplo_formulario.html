@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        label {
+            text-align: left;
+        }
+
+        fieldset {
+            border: 1px solid black;
+            padding: 10px;
+            border-radius: 10px;
+        }
+
+        legend {
+            text-align: center;
+        }
+
+        input {
+            display: block;
+            width: 95%;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <section>
+            <h2>
+                Formulario de Contacto
+            </h2>
+
+
+            <form action="/" method="post">
+
+                <fieldset>
+
+                    <legend>Informacion Personal</legend>
+
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" placeholder="Tu nombre aqui" required><br>
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="Introduce tu email" required><br>
+
+                    <label for="password">Contraseña:</label>
+                    <input type="password" id="password" name="password" required><br>
+
+
+                    <datalist id="idiomas" name="idiomas">
+                        <option>Español</option>
+                        <option>Inglés</option>
+                        <option>Francés</option>
+                    </datalist>
+
+                    <label>Idioma favorito:</label>
+                    <input type="text" list="idiomas" placeholder="Selecciona tu idioma" required><br>
+
+
+                </fieldset>
+
+                <fieldset>
+
+                    <legend>Informacion Adicional</legend>
+
+                    <label for="comentarios">Comentarios:</label><br>
+                    <textarea id="comentarios" name="comentarios" rows="4" cols="50"></textarea><br>
+
+                </fieldset>
+
+                <input type="submit" id="enviar" name="enviar" value="Enviar contacto"><br>
+
+            </form>
+
+            <details>
+                <summary>Detalles de contacto</summary>
+                <p>Información de contacto</p>
+            </details>
+        </section>
+
+
+
+    </main>
+
+
+
+</body>
+
+
+
+</html>

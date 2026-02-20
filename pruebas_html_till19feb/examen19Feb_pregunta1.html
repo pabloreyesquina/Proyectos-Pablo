@@ -1,0 +1,32 @@
+<!-- Escribe el código HTML5 de un cuadro de texto de un formulario que debe ser rellenado con los apellidos, edad y NIF del usuario antes de que el formulario pueda ser enviado al servidor. Tener en cuenta adicionalmente que: 
+•	La edad aceptada debe ser mayor de 18 años y por defecto con un valor de 25
+•	Hay que añadir un botón para el envío del formulario.
+•	Hay que limitar la longitud máxima del NIF a 10 caracteres.
+•	Hay que incluir todos los elementos input y los label necesarios y referirlos correctamente.
+•	Hay que añadir una acción sin efecto, al formulario llamada “/”. -->
+
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario Examen 19 Febrero</title>
+</head>
+<body>
+
+  <form action="/" method="get">
+    <label for="apellidos">Apellidos:</label>
+    <input type="text" id="apellidos" name="apellidos" required placeholder="Apellidos"><br>
+
+    <label for="edad">Edad:</label>
+    <input type="number" id="edad" name="edad" min="18" value="25" required><br>
+
+    <label for="NIF">NIF:</label>
+    <input type="text" id="NIF" name="NIF" maxlength="10" required placeholder="NIF"><br>
+    <br>
+    <input type="submit" value="Enviar">
+</form>
+    
+</body>
+</html>

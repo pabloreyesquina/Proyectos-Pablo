@@ -1,0 +1,26 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.card p {
+    color: red;
+}
+
+.highlight {
+
+    background-color: yellow;
+}
+
+ul > li {
+    list-style-type: square;
+}
+
+a {
+    color: red;
+
+}
+
+.special {
+    font-weight: bold;
+}

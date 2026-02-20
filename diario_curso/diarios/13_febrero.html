@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diario de Clase - Viernes 13 de Febrero</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, sans-serif; line-height: 1.6; color: #333; max-width: 900px; margin: auto; padding: 25px; background-color: #f0f2f5; }
+        header { background: #1a2a6c; color: white; padding: 30px; text-align: center; border-radius: 12px; margin-bottom: 30px; box-shadow: 0 4px 15px rgba(0,0,0,0.2); }
+        section { background: white; padding: 25px; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); margin-bottom: 25px; border-top: 5px solid #b21f1f; }
+        h2 { color: #1a2a6c; border-bottom: 2px solid #eee; padding-bottom: 10px; margin-top: 0; }
+        h3 { color: #b21f1f; font-size: 1.2em; margin-bottom: 10px; }
+        .highlight { background: #fff3cd; color: #856404; padding: 3px 8px; border-radius: 4px; font-family: 'Consolas', monospace; font-weight: bold; }
+        .enfasis-profesor { background: #e8f4fd; border-left: 6px solid #3498db; padding: 15px; margin: 15px 0; font-weight: 500; }
+        .code-block { background: #2d3436; color: #fab1a0; padding: 15px; border-radius: 8px; font-family: 'Courier New', monospace; overflow-x: auto; margin: 10px 0; }
+        ul { padding-left: 20px; }
+        li { margin-bottom: 12px; }
+        footer { text-align: center; color: #888; margin-top: 50px; font-size: 0.9em; border-top: 1px solid #ddd; padding-top: 20px; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Apuntes de Clase: Formularios y Validación</h1>
+        <p>Viernes, 13 de febrero de 2026 | Zaragoza, España</p>
+    </header>
+
+    <section>
+        <h2>1. Etiquetas y Accesibilidad Inicial</h2>
+        <p>Empezamos la clase repasando la importancia de la etiqueta <code>&lt;label&gt;</code>:</p>
+        <ul>
+            <li><strong>Conexión:</strong> Es vital conectar el texto con el input mediante el atributo <code>for</code> (en label) e <code>id</code> (en input).</li>
+            <li><strong>Importancia:</strong> Mejora la accesibilidad y amplía el área de clic para el usuario.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>2. Menús de Selección (Select y Datalist)</h2>
+        <p>Vimos cómo gestionar listas de opciones:</p>
+        <ul>
+            <li><strong>&lt;select&gt;:</strong> Uso de <code>multiple</code> para varias elecciones y <code>size</code> para la altura visual.</li>
+            <li><strong>&lt;optgroup&gt;:</strong> El profesor hizo hincapié en agrupar opciones para formularios largos.</li>
+            <li><strong>&lt;datalist&gt;:</strong> La gran diferencia es que permite "sugerir" valores pero deja al usuario escribir algo nuevo.</li>
+        </ul>
+        
+    </section>
+
+    <section>
+        <h2>3. Organización con Fieldset y Legend</h2>
+        <div class="enfasis-profesor">
+            <strong>⚠️ ENFASIS DEL PROFESOR:</strong> El uso de <code>&lt;fieldset&gt;</code> y <code>&lt;legend&gt;</code> no es solo por el recuadro gris. Es por <strong>semántica</strong>. Ayuda a los lectores de pantalla a saber que un grupo de preguntas pertenecen al mismo tema (ej: "Datos Personales").
+        </div>
+    </section>
+
+    <section>
+        <h2>4. Atributos de Control y Validación Nativa</h2>
+        <p>Conceptos clave de validación antes de entrar en Regex:</p>
+        <ul>
+            <li><strong>Readonly vs Disabled:</strong> El <code>readonly</code> envía el valor al servidor; el <code>disabled</code> no envía nada.</li>
+            <li><strong>Límites:</strong> Atributos <code>min</code>, <code>max</code>, <code>minlength</code>, <code>maxlength</code> y <code>step</code>.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>5. Expresiones Regulares (El "Superpoder")</h2>
+        <p>Utilizamos el atributo <code>pattern</code> para validaciones complejas:</p>
+        <ul>
+            <li><strong>Código Postal:</strong> <span class="highlight">[0-9]{5}</span> (5 dígitos exactos).</li>
+            <li><strong>Teléfono:</strong> <span class="highlight">[6-9][0-9]{8}</span> (Empieza por 6, 7, 8 o 9 y sigue con 8 números).</li>
+            <li><strong>NIF:</strong> <span class="highlight">[0-9]{8}[A-Za-z]</span> (8 números y una letra).</li>
+            <li><strong>Contraseña segura:</strong> <span class="highlight">(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}</span></li>
+        </ul>
+        <div class="enfasis-profesor">
+            <strong>📌 NOTA IMPORTANTE:</strong> Siempre hay que añadir el atributo <code>title</code>. Es la única forma de que el usuario sepa por qué su dato no es válido según el <code>pattern</code>.
+        </div>
+    </section>
+
+    <section>
+        <h2>6. Ejercicio: Fecha Dinámica con JS</h2>
+        <p>Finalizamos resolviendo cómo hacer que un calendario de reserva no permita elegir fechas pasadas:</p>
+        <div class="code-block">
+            &lt;script&gt;<br>
+            document.getElementById('reserva').min = new Date().toISOString().split('T')[0];<br>
+            &lt;/script&gt;
+        </div>
+    </section>
+
+    <section>
+        <h2>Reflexión de la sesión</h2>
+        <p>Hoy ha sido clave entender que la validación nativa ahorra mucho trabajo en JavaScript. Como nota personal: he desactivado Copilot para forzarme a aprender los patrones de Regex de memoria.</p>
+    </section>
+
+    <footer>
+        <p>Diario de Programación DAW - 2026</p>
+    </footer>
+
+</body>
+</html>

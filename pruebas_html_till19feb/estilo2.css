@@ -1,0 +1,98 @@
+:root{
+    --primary: #e31515;
+    --secondary: #64748b;    
+}
+
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333;
+}
+
+h1 {
+    font-family: "UnifrakturCook", 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 3rem;
+    font-weight: bold;
+    font-style: italic;
+   
+}
+
+article 
+{
+
+
+
+}
+
+
+
+
+p {
+    font-family: "Delius" "Helvetica Neue", Arial, sans-serif;
+    font-size: 1em;
+    font-style: italic;
+    line-height: 1.5;
+    color: #333;
+    
+}
+
+ font-family: "Delius", cursive;
+
+code {
+    font-family: "Courier New", monospace;
+    font-size: 0.9rem;
+    background-color: #f5f5f5;
+    padding: 2px 4px;
+    border-radius: 4px;
+}
+
+.fas, .fa-brands{
+color: #3498db;
+font-size: 1.5em;
+margin-right: 5px;
+
+}
+
+.fa-home {
+color: green;
+}
+
+.fa-discord {
+
+color: purple;
+
+}
+
+.fa-instagram {
+    color: orange;
+}
+
+}
+/* Personalización por icono */
+
+
+ blockquote {
+    border-left: 4px solid #ccc;
+    padding-left: 10px;
+    background-color: #f9f9f9;
+    margin: 10px 0;
+  }
+
+  .especial {
+    width: 400px;
+    white-space: nowrap;
+    font-size: 60px;
+    font-style: normal;
+    font-weight: 900;
+    color: var(--secondary);
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+

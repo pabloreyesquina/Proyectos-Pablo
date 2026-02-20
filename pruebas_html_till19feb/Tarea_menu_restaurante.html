@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="estilo_menu.css">
+</head>
+
+<body>
+    <h1>Menú del Restaurante</h1>
+
+    <main class="menu-container">
+        
+
+        <!-- Sección de Primeros Platos (Lista Ordenada) -->
+        <section class="primeros">
+            <h2>Primeros Platos</h2>
+            <ol>
+                <li>
+                    <span class="plato">Sopa de Marisco</span>
+                    <span class="precio">8.50 €</span>
+                </li>
+                <li>
+                    <span class="plato">Ensalada de Burrata y Tomate</span>
+                    <span class="precio">9.00 €</span>
+                </li>
+                <li>
+                    <span class="plato">Pasta al Pesto con Piñones</span>
+                    <span class="precio">8.75 €</span>
+                </li>
+            </ol>
+        </section>
+
+        <!-- Sección de Segundos Platos (Lista Ordenada) -->
+        <section class="segundos">
+            <h2>Segundos Platos</h2>
+            <ol>
+                <li>
+                    <span class="plato">Solomillo de Ternera a la Pimienta</span>
+                    <span class="precio">16.50 €</span>
+                </li>
+                <li>
+                    <span class="plato">Bacalao con Muselina de Ajo</span>
+                    <span class="precio">14.00 €</span>
+                </li>
+                <li>
+                    <span class="plato">Pollo Asado con Hierbas Aromáticas</span>
+                    <span class="precio">12.50 €</span>
+                </li>
+            </ol>
+        </section>
+
+        <!-- Sección de Postres (Lista No Ordenada) -->
+        <section class="postres">
+            <h2>Postres</h2>
+            <ul>
+                <li>
+                    <span class="plato">Flan de Huevo Casero</span>
+                    <span class="precio">4.50 €</span>
+                </li>
+                <li>
+                    <span class="plato">Brownie con Helado de Vainilla</span>
+                    <span class="precio">5.50 €</span>
+                </li>
+                <li>
+                    <span class="plato">Fruta de Temporada</span>
+                    <span class="precio">3.50 €</span>
+                </li>
+            </ul>
+        </section>
+    </main>
+    <!-- Tabla de Alérgenos -->
+    <aside>
+        <table class="alergenos">
+            <caption>Información de Alérgenos</caption>
+            <thead>
+                <tr>
+                    <th>Plato</th>
+                    <th>Ingrediente Alérgeno</th>
+                    <th>Tipo de Origen</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="vegetal">
+                    <td>Ensalada</td>
+                    <td>Frutos secos</td>
+                    <td>Origen Vegetal</td>
+                </tr>
+                <tr class="animal">
+                    <td>Solomillo</td>
+                    <td>Lácteos (Mantequilla)</td>
+                    <td>Origen Animal</td>
+                </tr>
+                <tr class="vegetal">
+                    <td>Pasta al Pesto</td>
+                    <td>Gluten</td>
+                    <td>Origen Vegetal</td>
+                </tr>
+                <tr class="animal">
+                    <td>Bacalao</td>
+                    <td>Pescado</td>
+                    <td>Origen Animal</td>
+                </tr>
+            </tbody>
+        </table>
+    </aside>
+
+
+    <!-- Pie del menú -->
+    <div class="both">  </div>
+    <footer class="pie-menu">
+
+        <div class="otros-restaurantes">
+            <h3>Visita otros restaurantes de nuestra cadena</h3>
+            <ul>
+                <li>
+                    <a href="https://ejemplo-restaurante-mar.com" target="_blank">La Brisa del Mar</a>
+                    <p>Ubicado frente al puerto, especializado en pescados frescos y arroces tradicionales.</p>
+                </li>
+                <li>
+                    <a href="https://ejemplo-restaurante-montana.com" target="_blank">El Refugio del Valle</a>
+                    <p>Cocina de montaña con ingredientes locales y carnes de caza de la región.</p>
+                </li>
+            </ul>
+        </div>
+
+        <p class="suplemento">Suplemento de terraza: 1,50€ por persona.</p>
+        <p class="suplemento">Suplemento de pan artesano: 0,80€.</p>
+    </footer>
+
+
+</body>
+
+</html>

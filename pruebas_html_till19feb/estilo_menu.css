@@ -1,0 +1,74 @@
+body {
+    background: linear-gradient(#6464ef, #b5efe6);
+
+}
+
+
+ol,ul {
+    font-size: 16px;
+}
+
+main {
+    float: left;
+    width: 80%;
+}
+
+aside {
+    float: right;
+    margin-left: 5px;
+    width: 19%;
+
+}
+
+div.both {
+    clear: both
+}
+
+
+.primeros {
+    background-color: aquamarine;
+}
+
+.segundos {
+    background-color: aqua;
+
+}
+
+.plato {
+    float: left;
+    margin-left: 10px;
+}
+
+.postres {
+    background-color: rgb(247, 122, 235);
+}
+
+.precio {
+    font-style: italic;
+    font-size: 14px;
+    float: right;
+    margin-right: 10px;
+}
+
+.suplemento {
+    color: red;
+}
+
+.vegetal {
+
+    color: green;
+}
+
+.animal {
+    color: orange;
+}
+
+.otros-restaurantes {
+    font-family: 'Courier New', Courier, monospace;
+
+}
+
+table {
+    border: 1px dotted;
+
+}

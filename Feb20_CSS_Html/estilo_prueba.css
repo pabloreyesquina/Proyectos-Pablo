@@ -1,0 +1,110 @@
+.container {
+  display: grid;
+  /* Definimos 3 columnas: la lateral de 200px, una central flexible y otra de 150px */
+  grid-template-columns: 200px 1fr 150px;
+  
+  /* Definimos las filas: el header mide 60px, el contenido se expande y el footer 40px */
+  grid-template-rows: 60px 1fr 40px;
+ 
+  /* Espacio entre las celdas */
+  gap: 10px;
+  
+  /* Altura total de la pantalla para ver el efecto */
+  height: 100vh;
+}
+
+/* Ahora asignamos cada pieza a su lugar */
+.header {
+  grid-column: 1 / 4; /* Empieza en la línea 1 y termina en la 4 (ocupa todo el ancho) */
+  background-color: #3498db;
+}
+
+.sidebar {
+  grid-row: 2 / 3; /* Se queda en la fila del medio */
+  background-color: #2ecc71;
+}
+
+.content {
+  background-color: #ecf0f1;
+}
+
+.widgets {
+  background-color: #f1c40f;
+}
+
+.footer {
+  grid-column: 1/ 4; /* También ocupa todo el ancho abajo */
+  background-color: #34495e;
+  color: white;
+}
+
+
+
+
+
+/* 1. Contenedor con altura para el scroll */
+.card-container {
+    height: 2000px;
+    background-color: #f4f4f4; /* Un gris claro para ver el fondo */
+    padding: 20px;
+}
+
+/* 2. La tarjeta que se queda pegada */
+.user-card {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Espacio entre avatar y texto */
+    position: sticky;
+    top: 20px;
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    width: fit-content; /* Para que no ocupe todo el ancho */
+}
+
+/* 3. El círculo del Avatar */
+.avatar-container  {
+    width: 80px;  /* Cambiado de 'size' a width/height */
+    height: 80px;
+    border-radius: 50%;
+    background-color: #3498db; /* Azul para el círculo */
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    position: relative; /* "Ancla" para el punto verde */
+}
+
+/* 4. El punto de estado (Status Dot) */
+.status-dot {
+    width: 15px;
+    height: 15px;
+    background-color: #2ecc71; /* Verde */
+    border: 2px solid white; /* Un borde para que resalte */
+    border-radius: 50%;
+    position: absolute;
+    bottom: 5px;
+    right: 5px;    
+}
+
+/* 5. El pseudoelemento */
+h3::before {
+    content: "ID: "; /* ¡Obligatorio para que aparezca! */
+    color: #e67e22; /* Color naranja */
+    font-size: 0.8em;
+}
+
+.dummy-content {
+    margin-top: 50px;
+    color: #555;
+    line-height: 1.6;
+}
+
+.box {
+    height: 300px;
+    background: #ddd;
+    margin: 20px 0;
+    border-radius: 8px;
+}
