@@ -1,0 +1,28 @@
+# --- Archivos del Sistema (Muy importante en ordenadores ajenos) ---
+# Ignora archivos invisibles que crean Windows y macOS para las carpetas
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# --- Extensiones y Editores ---
+# Ignora las carpetas de configuración de VS Code o Sublime Text
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# --- Node.js (JavaScript) ---
+# Si en el futuro instalas paquetes, esto evitará subir gigas de librerías
+node_modules/
+package-lock.json
+npm-debug.log*
+
+# --- Archivos Temporales y Logs ---
+# Por si acaso el navegador o alguna herramienta genera registros
+*.log
+.cache/
+
+# --- Seguridad ---
+# Para que nunca subas por error tus contraseñas o claves de API
+.env
+.env.local
