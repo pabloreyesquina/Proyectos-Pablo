@@ -4,7 +4,7 @@ Se propone la realización de una agenda-calendario.
 
 
 
-Debe tener capacidad para asignar citas a uin servicio único (no se puede atender a más de un cliente simultáneamente desde el punto de vista del negocio).
+Debe tener capacidad para asignar citas a un servicio único (no se puede atender a más de un cliente simultáneamente desde el punto de vista del negocio).
 
 
 
