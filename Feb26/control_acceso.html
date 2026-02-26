@@ -1,0 +1,108 @@
+<!-- Sistema de control de acceso:
+
+Solicite al usuario su edad mediante 'prompt()'
+
+Determine si puede acceder a diferentes secciones:
+
+Si es menor de 13 años: "Acceso denegado"
+
+Si tiene entre 13 y 17 años: "Acceso a contenido para adolescentes"
+
+Si mayor de 18 años: "Acceso completo"
+
+Si tiene acceso completo, comprobar si es mayor de 65 años para ofrecer "Descuento senior"
+
+Nota: para el uso de prompt(), integrar este código como script de página web. La información al usuario darla a través de alert()
+también en la página web. Hacer una versión del ejercicio para que sea ejecutable de modo independiente de página web.
+ -->
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+
+<body>
+
+    <h1>Verificación de edad</h1>
+<!--     <form action="" method="get"></form>
+    <label for="edad">Introduce tu edad</label>
+    <input type="number" id="edad" name="edad" placeholder="Introduce tu edad" required>
+    <button type="button" onclick="comprobarAcceso()">Verificar</button> -->
+<!-- <script src="control_acceso.js"></script> -->
+
+</body>
+
+<script> 
+/* let edad = Number(prompt("Introduce tu edad"));
+
+if (edad <13){
+    alert("Acceso denegado");
+}
+else if (edad>=13 && edad <=17){
+    alert  ("Acceso a contenido para adolescentes");
+}
+else if (edad>=18) {
+    alert("Acceso completo");
+    if (edad >=65){
+        alert("Descuento senior!");
+    }
+} */
+/* 
+let nota = parseInt(prompt("Introduce la nota: "));
+let letra;
+if (isNaN(nota) || nota < 0 || nota > 100) { alert("Error: Introduce un número válido entre 0 y 100");
+}
+else{
+switch (true) {
+        case (nota >= 90): 
+            letra = "A";        
+            break;
+        case (nota >= 80):
+            letra = "B";        
+            break;
+        case (nota >= 70):
+            letra = "C";        
+            break;
+        case (nota >= 60):
+            letra = "D";        
+            break;
+        default:
+            letra = "F";
+            break;
+    }
+    alert("Tu calificación es: " + letra);
+} */
+
+/* let nota = parseInt(prompt("Introduce la nota: "));
+let letra;
+if (isNaN(nota) || nota < 0 || nota > 100) { alert("Error: Introduce un número válido entre 0 y 100");
+}
+else{
+    let letra = (nota>=90) ? "A":
+                (nota>=80) ? "B":
+                (nota>=70) ? "C":
+                (nota>=60) ? "D":"F";
+    alert("Tu calificación es: " + letra);
+} */
+
+let nota = parseInt(prompt("Introduce la nota: "));
+let letra;
+while (isNaN(nota)||nota<0||nota>100){
+    nota= parseInt(prompt("Escriba una puntuación Válida: "))
+}
+    letra = (nota>=90) ? "A":
+                (nota>=80) ? "B":
+                (nota>=70) ? "C":
+                (nota>=60) ? "D":"F";
+    alert("Tu calificación es: " + letra);
+
+
+</script>
+
+
+
+</html>
