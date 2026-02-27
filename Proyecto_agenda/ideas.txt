@@ -2,3 +2,6 @@ Se puede empezar con agendar citas para un solo día.
 
 intentar hacer solo esto para empezar.
 
+--
+Comenta un compañero hacer una calculadora antes de la agenda para aprender los conceptos que se necesitarían en la agenda.
+

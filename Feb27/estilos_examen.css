@@ -1,0 +1,28 @@
+.urgencias {
+    color: green;
+    font-weight: bold;
+}
+
+.incidencias {
+    color: red;
+    font-weight: bold;
+}
+
+.sin-clasificar {
+    color: blue;
+    font-weight: bold;
+}
+
+.recuadro-negrita {
+    border: 1px solid black;
+    font-weight: bold;
+}
+
+.subrayado {
+    text-decoration: underline;
+}
+li {
+    margin-bottom: 20px;}
+
+li ul li {
+    margin-bottom: 5px;}
