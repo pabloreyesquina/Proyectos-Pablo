@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- Método 1: Atributo onclick en HTML -->
+    <button onclick="miFuncion()">Hacer click</button>
+    <script>
+        function miFuncion() {
+            alert('¡Botón clickeado!');
+        }
+    </script>
+
+
+    <!--Método 2: Propiedad onclick en JavaScript -->
+    <button id="miBoton">Hacer click</button>
+
+    <script>
+        document.getElementById('miBoton').onclick = function () {
+            alert('¡Botón clickeado!');
+        }
+    </script>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque ad quisquam ipsam recusandae iusto suscipit?
+        Ab animi id dolorum rem error. Adipisci commodi at a dignissimos modi praesentium debitis fuga?</p>
+    <!-- hacer script para que el párrafo anterior 
+     cambie color de letra a rojo al pasar el ratón
+     por encima-->
+
+    <script>
+        const parrafoLorem = document.querySelector("p")
+        parrafoLorem.addEventListener('mouseover', function () {
+            parrafoLorem.style.color = "red";
+        });
+        parrafoLorem.addEventListener("mouseleave", function(){
+            parrafoLorem.style.color = "black";
+        })
+
+    </script>
+
+</body>
+
+</html>
