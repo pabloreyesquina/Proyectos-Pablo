@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 10 Marzo</title>
+</head>
+
+<body>
+    <div id="contenedor-lenguas">
+        <h1>Acción formativa en lenguas</h1>
+        <button id="boton">Pulsa para activar</button>
+    </div>
+
+    <script>
+        function ejecutorAccion() {
+            const edad = parseInt(prompt("Introduce tu edad"))
+            const contenedor = document.getElementById("contenedor-lenguas")
+
+            if (edad <= 18) {
+                const aprenderLatin = document.createElement("p")
+                aprenderLatin.textContent = "“usted tiene que aprender latín”";
+
+                const enlaceLatin = document.createElement("a")
+                enlaceLatin.textContent = "Enlace a curso de latin";
+                enlaceLatin.href = "https://scholalatina.it/es/scholae-latinae-cursos-de-latin/";
+                enlaceLatin.target = "_blank";
+
+                contenedor.append(aprenderLatin, enlaceLatin)
+            }
+            else {
+                const parrafoLorem = document.createElement("p")
+                parrafoLorem.textContent = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam unde recusandae aut. Tempora consectetur excepturi eveniet cumque itaque reprehenderit facilis pariatur. Cum neque nemo mollitia facilis eos tenetur, ea pariatur";
+                contenedor.appendChild(parrafoLorem)
+
+            }
+
+
+        }
+
+        const btn = document.getElementById("boton");
+        btn.addEventListener("click", ejecutorAccion);
+
+
+
+    </script>
+</body>
+
+</html>
