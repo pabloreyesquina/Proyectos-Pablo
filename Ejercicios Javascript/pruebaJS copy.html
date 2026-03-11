@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 10 Marzo</title>
+    <style>
+    /* El fondo que cubre toda la pantalla */
+    .modal-fondo {
+        display: none; /* Oculto por defecto */
+        position: fixed;
+        top: 0; left: 0;
+        width: 100%; height: 100%;
+        background-color: rgba(0,0,0,0.7); /* Oscurece el fondo */
+        z-index: 1000;
+    }
+
+    /* La cajita blanca del centro */
+    .modal-contenido {
+        background-color: white;
+        margin: 15% auto;
+        padding: 20px;
+        width: 50%;
+        border-radius: 15px;
+        text-align: center;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    }
+</style>
+</head>
+
+<body>
+    <div id="contenedor-lenguas">
+        <h1>Acción formativa en lenguas</h1>
+        <button id="boton">Pulsa para activar</button>
+    </div>
+
+    <div id="miModal" class="modal-fondo">
+        <div class="modal-contenido">
+            <div id="mensaje-modal">
+                </div>
+            <br>
+            <button onclick="cerrarModal()">Cerrar Ventana</button>
+        </div>
+    </div>
+
+    <script>
+    function cerrarModal() {
+        document.getElementById("miModal").style.display = "none";
+    }
+
+    function ejecutorAccion() {
+        const edad = parseInt(prompt("Introduce tu edad"));
+        
+        // Seleccionamos el hueco dentro de la modal
+        const mensajeModal = document.getElementById("mensaje-modal");
+        const modal = document.getElementById("miModal");
+
+        // Limpiamos contenido anterior para que no se acumule al abrirla varias veces
+        mensajeModal.innerHTML = "";
+
+        if (edad <= 18) {
+            const aprenderLatin = document.createElement("p");
+            aprenderLatin.textContent = 'Usted tiene que aprender latín';
+
+            const enlaceLatin = document.createElement("a");
+            enlaceLatin.textContent = "Enlace a curso de latin";
+            enlaceLatin.href = "https://scholalatina.it/es/scholae-latinae-cursos-de-latin/";
+            enlaceLatin.target = "_blank";
+
+            mensajeModal.append(aprenderLatin, enlaceLatin);
+        } else {
+            const parrafoLorem = document.createElement("p");
+            parrafoLorem.textContent = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora sequi adipisci eum consectetur voluptatem. Repellendus deleniti mollitia corrupti itaque aliquid distinctio, est architecto cumque dolore molestiae, debitis similique dicta neque?';
+            mensajeModal.appendChild(parrafoLorem);
+        }
+
+        // ACCIÓN CLAVE: Mostramos la modal cambiando el display
+        modal.style.display = "block";
+    }
+
+    const btn = document.getElementById("boton");
+    btn.addEventListener("click", ejecutorAccion);
+
+    </script>
+</body>
+
+</html>

@@ -16,6 +16,10 @@
             box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
 
         }
+        .contenedor-foto:hover{
+            transform: scale(1.02);
+
+        }
 
         img {
             display: block;
@@ -75,7 +79,7 @@
 
             const contenedor = document.createElement("div");
             contenedor.className = "contenedor-foto";
-
+            
             const tituloImagen = document.createElement("h3");
             tituloImagen.textContent = titulo;
 
@@ -93,7 +97,7 @@
             const botonEliminar = document.createElement("button");
             botonEliminar.textContent = "Eliminar";
             botonEliminar.className = "btn-eliminar";
-
+            
             botonEliminar.onclick = function () {
                 contenedor.remove();
             };
