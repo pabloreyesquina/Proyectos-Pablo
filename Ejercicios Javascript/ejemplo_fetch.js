@@ -30,3 +30,4 @@ async function obtenerClima(ciudad) {
   const datos = await response.json();
   document.getElementById('temperatura').textContent = datos.main.temp;
 }
+
