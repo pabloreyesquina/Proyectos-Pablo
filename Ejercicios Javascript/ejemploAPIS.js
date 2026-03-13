@@ -1,6 +1,6 @@
 /* async function obtenerClima(ciudad) {
   const btnCargar = document.getElementById("btnCargar");
-  const ak = "1bc8cb233e8dee7eb57a5aa57eb5842e"
+  const ak = ""
   const response = await fetch(`https://api.openweathermap.org/data/3.0/onecall?lat={lat}&lon={lon}&exclude={part}&appid={API key}`);
   const datos = await response.json();
   document.getElementById('temperatura').textContent = datos.main.temp;
@@ -9,7 +9,7 @@
 
 //PARA PROBAR CON API-KEYS:
 
-const API_KEY = "1bc8cb233e8dee7eb57a5aa57eb5842e"
+const API_KEY = ""
 const url_base = "https://api.openweathermap.org/data/2.5/weather?q="
 const url_ciudad_appid = "London,uk&APPID="
 const url_completa = url_base + url_ciudad_appid + API_KEY
