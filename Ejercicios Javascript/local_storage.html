@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+    
+
+<!-- Crear un formulario con un botón capturar el nombre del usuario, guardarlo y mostrarlo desde localStorage -->
+<body>
+    <form>
+        <label for="name">Nombre:</label>
+        <input type="text" id="name" name="name">
+        <label for="surname">Apellido:</label>
+        <input type="text" id="surname" name="surname">
+        <button type="submit">Guardar</button>
+    </form>
+
+    <script>
+        const form = document.querySelector('form');
+        form.addEventListener('submit', function(event) {
+            event.preventDefault();
+            const name = document.getElementById('name').value + ' ' + document.getElementById('surname').value;
+            localStorage.setItem('nombre', name);
+            alert('Nombre guardado en localStorage: ' + localStorage.getItem('nombre'));
+        }); 
+        console.log("El nombre guardado en LocalStorage es: ", localStorage.getItem('nombre'));
+        
+    </script>
+</body>
+</html>
