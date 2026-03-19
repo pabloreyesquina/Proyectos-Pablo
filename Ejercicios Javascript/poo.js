@@ -122,6 +122,8 @@ console.log(miCuenta)
 //Crear una clase para objetos persona que tenga como atributos: nombre, apellidos, NIF. crearle internamente un método estático que valide la letra del NIF. 
 //Que como método no estático tenga info() que dará toda la información de un objeto de la clase Persona
 
+//No está bien
+
 class Persona {
     constructor(_nombre, _apellidos, _NIF) {
         this.nombre = _nombre;
@@ -146,3 +148,22 @@ console.log(persona.info());
 console.log(Persona.validarNIF(persona.NIF));
 
 
+//Ejercicio clases
+
+class Animal {
+    constructor(_nombre) {
+        this.nombre = _nombre;
+    }
+    hablarSonido() {
+        console.log("Hago un sonido");
+    }
+}
+
+class Perro extends Animal {
+    constructor(_raza) {
+        this.raza = _raza;
+    }
+    ladrar() {
+        console.log("Guau guau");
+    }           
+}
