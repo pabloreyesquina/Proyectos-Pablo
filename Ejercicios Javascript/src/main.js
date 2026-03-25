@@ -11,7 +11,7 @@ import { Producto } from "./modelos/Producto.js";
 
 const miGestor = new GestorProducto();
 
-const producto1 = new Producto("Laptop", 999, 5);
+const producto1 = new Producto("Laptop", 999.34734, 5);
 miGestor.agregar(producto1);        
 
 const producto2 = new Producto("Smartphone", 499, 10);          

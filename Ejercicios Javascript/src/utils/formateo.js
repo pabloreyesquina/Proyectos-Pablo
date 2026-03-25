@@ -10,13 +10,6 @@ export function formatearStock(stock) {
 }
 
 
-/* Importa todo lo necesario
-
-Crea algunos productos
-
-Agrégalos al gestor
-
-Muestra la lista y el total */
 
 
 

@@ -1,0 +1,62 @@
+<!-- Tienes un botón en tu HTML y un objeto con información de un usuario.
+Objetivo:
+
+Al hacer clic en el botón, debes extraer el nombre y la profesion del objeto usando destructuring.
+
+Inserta un párrafo en el body que diga: "Hola, soy [nombre] y trabajo como [profesion]".
+
+Usa un template literal para construir el string. -->
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button id="miBoton">Clickeame</button>
+    <p id="miParrafo"></p>
+
+    <script>
+        const datos = { id: 1, nombre: "Elena", profesion: "Desarrolladora", pais: "España" };
+        const miBoton = document.getElementById("miBoton");
+        const miParrafo = document.getElementById("miParrafo");
+
+        miBoton.addEventListener("click", function () {
+            const { nombre, profesion } = datos;
+            miParrafo.textContent = `Hola, soy ${nombre} y trabajo como ${profesion}`;
+        });
+
+    </script>
+</body>
+
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="buscador" placeholder="Busca un nombre...">
+<ul id="listaUsuarios"></ul>
+    <script>
+        const usuarios = ["Pablo", "Elena", "Ana", "Pedro", "Lucía", "Marcos", "Alejandro", "Belén"];
+
+        const buscador = document.getElementById("buscador");
+        const listaUsuarios = document.getElementById("listaUsuarios");
+
+        
+
+    </script>
+
+
+</body>
+</html>

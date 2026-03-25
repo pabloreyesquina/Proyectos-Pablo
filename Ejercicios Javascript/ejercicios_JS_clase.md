@@ -186,7 +186,7 @@ const usuarios = [
           console.log(`${this.nombre} saluda a ${amigo}`);
      });
   }
-};
+;
 
 usuario.saludarAmigos();
 Ejercicio 2, crea una clase Cronometro con:
@@ -208,3 +208,6 @@ Propiedad segundos = 0.
 // Después de 3 segundos:
 console.log(crono.obtenerTiempo()); //3
 crono.detener();
+
+Ejercicios del día 23/03
+
