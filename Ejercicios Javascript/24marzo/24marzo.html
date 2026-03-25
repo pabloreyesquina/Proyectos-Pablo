@@ -37,26 +37,54 @@ Usa un template literal para construir el string. -->
 
 </html> -->
 
-<!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Buscador en Tiempo Real</title>
 </head>
 <body>
+
     <input type="text" id="buscador" placeholder="Busca un nombre...">
-<ul id="listaUsuarios"></ul>
+    <ul id="listaUsuarios"></ul>
+
     <script>
+        // 1. Datos de partida
         const usuarios = ["Pablo", "Elena", "Ana", "Pedro", "Lucía", "Marcos", "Alejandro", "Belén"];
 
-        const buscador = document.getElementById("buscador");
-        const listaUsuarios = document.getElementById("listaUsuarios");
+        // 2. Selección de elementos del DOM
+        const inputBuscador = document.getElementById("buscador");
+        const listaUl = document.getElementById("listaUsuarios");
 
-        
+        // 3. Función de Renderizado (Pintar)
+        // Esta función recibe un array y lo dibuja en el HTML
+        function pintarNombres(lista) {
+            // Limpiamos la lista anterior para que no se acumulen
+            listaUl.innerHTML = "";
+
+            lista.forEach(nombre => {
+                const li = document.createElement("li");
+                li.textContent = nombre;
+                listaUl.appendChild(li);
+            });
+        }
+
+        // 4. Evento de Escucha (Input)
+        inputBuscador.addEventListener("input", (e) => {
+            // Capturamos lo que escribe el usuario y lo pasamos a minúsculas
+            const texto = e.target.value.toLowerCase();
+
+            // Filtramos el array original
+            const filtrados = usuarios.filter(nombre => 
+                nombre.toLowerCase().includes(texto)
+            );
+
+            // Volvemos a pintar pero solo con los filtrados
+            pintarNombres(filtrados);
+        });
+
+        // 5. Estado inicial: Mostramos todos al cargar la página
+        pintarNombres(usuarios);
 
     </script>
-
-
 </body>
 </html>

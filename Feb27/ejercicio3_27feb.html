@@ -10,19 +10,25 @@
 <body>
 
     <section>
-        <article>
+<!--         <article>
             <h2>Reproductor de Audio</h2>
             <audio controls autoplay muted>
                 <source src="03 Howard Duff Biography.mp3" type="audio/mpeg">
 
             </audio>
-        </article>
+        </article> -->
 
         <article>
             <h2>Reproductor de Vídeo</h2>
             <video controls autoplay muted>
-                <source src="https://archive.org/download/BigBuckBunny_124/Content/big_buck_bunny_720p_surround.mp4"
-                    type="video/mp4">
+                <source src="big_buck_bunny_720p_surround.mp4"
+                    type="video/mp4">                
+                <track 
+                src="./subtitulos-es.vtt" 
+                kind="subtitles" 
+                srclang="es" 
+                label="Español"
+                default>
             </video>
         </article>
     </section>
