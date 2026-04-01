@@ -248,14 +248,45 @@ idiomas_unicos = set(todos_los_idiomas)
 print(f"1. Hay {len(idiomas_unicos)} idiomas distintos.")
 
 # --- PREGUNTA 2: ¿Cuál es el idioma usado por más países? ---
-conteo_idiomas = {}
-for idioma in todos_los_idiomas:
+#conteo_idiomas = {}
+""" for idioma in todos_los_idiomas:
     # Si el idioma ya está en el diccionario, sumamos 1, si no, empezamos en 1
     conteo_idiomas[idioma] = conteo_idiomas.get(idioma, 0) + 1
 
 # Buscamos el idioma que tiene el valor máximo de repeticiones
 idioma_top = max(conteo_idiomas, key=conteo_idiomas.get)
-print(f"2. El idioma más usado es el {idioma_top} ({conteo_idiomas[idioma_top]} países).")
+print(f"2. El idioma más usado es el {idioma_top} ({conteo_idiomas[idioma_top]} países).") """
+
+#Otra forma:
+
+conteo_idiomas = {}
+for idioma in todos_los_idiomas:
+    if idioma in conteo_idiomas:
+        # Si ya lo tenemos apuntado, le sumamos 1 al contador
+        conteo_idiomas[idioma] += 1
+    else:
+        # Si es la primera vez que aparece, lo anotamos con el número 1
+        conteo_idiomas[idioma] = 1
+
+
+print(conteo_idiomas)
+# Para encontrar el máximo sin usar el 'key' de max(), podríamos hacer esto:
+idioma_top = ""
+max_veces = 0
+
+# Iteramos directamente sobre el diccionario (esto nos da las CLAVES)
+for idioma in conteo_idiomas:
+    # Usamos la clave 'idioma' para acceder al valor en el diccionario
+    cantidad = conteo_idiomas[idioma]
+    
+    if cantidad > max_veces:
+        max_veces = cantidad
+        idioma_top = idioma
+
+print(f"El ganador es {idioma_top} con {max_veces} países.")
+
+
+
 
 # --- PREGUNTA 3: Diez países con mayor población ---
 # Ordenamos la lista de diccionarios por la clave 'population' de mayor a menor
