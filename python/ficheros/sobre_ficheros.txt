@@ -1,0 +1,15 @@
+Manejo de archivos
+
+
+
+
+Hasta ahora hemos visto distintos tipos de datos en Python. Normalmente almacenamos datos en distintos formatos de archivo. Además de manejar archivos, en esta sección veremos diferentes formatos (.txt, .json, .xml, .csv, .tsv, .excel). Primero, familiaricémonos con el manejo de archivos usando un formato común (.txt).
+
+El manejo de archivos es una parte importante de la programación; nos permite crear, leer, actualizar y eliminar archivos. En Python usamos la función incorporada open() para manipular archivos.
+
+"r" - lectura - valor por defecto. Abre el archivo solo para lectura; si no existe genera un error.
+"a" - append (añadir) - abre el archivo para agregar contenido al final; crea el archivo si no existe.
+"w" - escritura - abre el archivo para escribir, sobrescribe si existe; crea el archivo si no existe.
+"x" - crear - crea el archivo; si existe genera un error.
+"t" - texto - valor por defecto. Modo texto.
+"b" - binario - modo binario (por ejemplo para imágenes).
